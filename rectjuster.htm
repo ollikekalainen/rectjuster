@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="UTF-8">
+		<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+		<meta name='author' content='Olli Kekäläinen, Rajahyöty Oy'/>
+ 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+  		<script src="code/rectjuster.js"></script>
+
+		<script>
+			const COUNT = 31;
+			const PADDING = 20;
+			const AREA_MARGIN = 30;
+			const ASPECT_RATIO = 9/6;
+			const AREA_ID = "area51";
+			const RECTJUSTER = new Rectjuster({ aspectRatio: ASPECT_RATIO, padding: PADDING, minWidth: 80 });
+
+			window.onresize = () => { render();	};
+			window.onload = () => { render();};
+
+			function addContainer() {
+				const style = "position:fixed;"
+					+ "top:" + (AREA_MARGIN + PADDING) + "px;"
+					+ "left:" + (AREA_MARGIN + PADDING) + "px;"
+					+ "bottom:" + AREA_MARGIN + "px;"
+					+ "right:" + AREA_MARGIN + "px;"
+					+ "text-align:center;"
+				appendHtml( document.body, "<div id='" + AREA_ID + "' style='" + style + "'></div>" );
+			}
+
+			function render() {
+				const count = COUNT;
+				const container = document.getElementById( AREA_ID );
+				const result = RECTJUSTER.adjust({ 
+					rectangleCount: count, 
+					width: container.clientWidth, 
+					height: container.clientHeight 
+				});
+				const rowStyle = "white-space:nowrap;"
+					+ "display:block;"
+					+ "width:100%;"
+					+ "height:" + result.height + "px;"
+					+ "text-align:center;"
+					+ "margin-bottom:" + PADDING + "px;"
+					+ "box-sizing: border-box;"
+				const rectStyle = "display:inline-block;"
+					+ "box-sizing: border-box;"
+					+ "border-color:#222222;"
+					+ "border-width:1px;"
+					+ "border-style:solid;"
+					+ "width:" + result.width + "px;"
+					+ "height:" + result.height + "px;"
+					+ "margin-right:" + PADDING + "px;"
+				removeChildren(container);
+				let content = "", row = 0, col, frame = 0, rowElement;
+				while (row++ < result.rows) {
+					content = "<div id='row" + row + "' style='" + rowStyle + "'></div>";
+					appendHtml( container, content );
+					rowElement = document.getElementById( "row" + row );
+					col = 0;
+					while (col++ < result.columns && frame++ < result.rectangles) {
+						appendHtml( rowElement, "<div style='" + rectStyle + "'></div>" );
+					}
+				}
+			}
+
+			function render_alt() {
+				const count = COUNT;
+				const container = document.getElementById( AREA_ID );
+				const result = RECTJUSTER.adjust({ 
+					rectangleCount: count, 
+					width: container.clientWidth, 
+					height: container.clientHeight 
+				});
+				const rectStyle = "display:inline-block;"
+					+ "box-sizing: border-box;"
+					+ "border-color:#222222;"
+					+ "border-width:1px;"
+					+ "border-style:solid;"
+					+ "width:" + result.width + "px;"
+					+ "height:" + result.height + "px;"
+					+ "margin-right:" + PADDING + "px;"
+					+ "margin-bottom:" + PADDING + "px;"
+				removeChildren(container);
+				let i = 0;
+				while (i++ < result.rectangles) {
+					appendHtml( container, "<div style='" + rectStyle + "'></div>" );
+				}
+			}
+
+			function removeChildren(e) {
+				while (e.hasChildNodes()) {  
+					e.removeChild(e.firstChild);
+				}				
+			}
+
+			function appendHtml( e, html ) {
+				e.insertAdjacentHTML( "beforeEnd", html );
+			}
+
+		</script>
+
+	</head>
+
+
+	<body>
+		<script>
+			addContainer();
+		</script>
+	</body>
+
+</html>

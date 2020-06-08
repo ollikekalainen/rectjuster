@@ -1,0 +1,25 @@
+{
+  "main": "rectjuster.js",
+  "name": "rectjuster",
+  "version": "1.0.0",
+  "description": "A tool for scaling smaller rectangles inside a larger one.",
+  "dependencies": {
+  },
+  "scripts": {
+  },
+  "engines": {
+    "node": ">= 8.11.3"
+  },
+  "bugs": "https://github.com/ollikekalainen/rectjuster/issues",
+  "keywords": [
+    "rectangle",
+    "scaling"
+  ],
+    "repository": {
+    "type": "git",
+    "url": "git://github.com/ollikekalainen/rectjuster.git"
+  },
+  "homepage": "https://github.com/ollikekalainen/rectjuster",
+  "author": "Olli Kekäläinen",
+  "license": "MIT"
+}
