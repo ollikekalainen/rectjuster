@@ -13,6 +13,14 @@
   "bugs": "https://github.com/ollikekalainen/rectjuster/issues",
   "keywords": [
     "rectangle",
+    "aspect",
+    "ratio",
+    "width",
+    "height",
+    "size",
+    "area",
+    "minwidth",
+    "minheight",
     "scaling"
   ],
     "repository": {

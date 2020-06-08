@@ -4,7 +4,7 @@
 and / or height to fit a larger rectangle with a given width and height. It also takes
 into account the width of the padding on the bottom and right sides of the rectangles.
 
-The result of the adjustment process includes the width and height of the scaled rectangles
+The result of the adjustment includes the width and height of the scaled rectangles
 and the number of rows and columns according to which the rectangles are to be arranged 
 inside a larger rectangle. The result of the calculation also includes the actual number of 
 rectangles that fit inside the larger rectangle with the given minimum width and / or height.
@@ -19,7 +19,7 @@ npm install rectjuster
 
 ### Initialization
 
-#### node.js
+#### Node.js
 
           
 	const Rectjuster = require("rectjuster");
