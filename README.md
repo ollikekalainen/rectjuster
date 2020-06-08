@@ -1,6 +1,6 @@
 #Rectjuster
 	
-Rectjuste is a tool for scaling rectangles with a given aspect ratio, minimum width, 
+Rectjuster is a tool for scaling rectangles with a given aspect ratio, minimum width, 
 and / or height to fit a larger rectangle with a given width and height. It also takes
 into account the width of the padding on the bottom and right sides of the rectangles.
 
@@ -14,13 +14,17 @@ rectangles that fit inside the larger rectangle with the given minimum width and
 
 ### node.js
 
-const Rectjuster = require("rectjuster");
-const rectjuster = new Rectjuster(options)
+          
+	const Rectjuster = require("rectjuster");
+	const rectjuster = new Rectjuster(options);
+          
 
 
 ### Browser
 
-const rectjuster = new new Rectjuster(options)
+         
+	const rectjuster = new new Rectjuster(options);
+	     
 
 
 ### Initalization options
