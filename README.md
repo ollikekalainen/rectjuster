@@ -1,6 +1,6 @@
 # Rectjuster
 	
-Rectjuster is a tool for scaling rectangles with a given aspect ratio, minimum width, 
+**Rectjuster** is a tool for scaling rectangles with a given aspect ratio, minimum width, 
 and / or height to fit a larger rectangle with a given width and height. It also takes
 into account the width of the padding on the bottom and right sides of the rectangles.
 
@@ -10,7 +10,7 @@ inside a larger rectangle. The result of the calculation also includes the actua
 rectangles that fit inside the larger rectangle with the given minimum width and / or height.
 
 
-## Installaion
+## Installation
 
 npm install rectjuster
 
@@ -38,16 +38,17 @@ npm install rectjuster
 	aspectRatio  number
 		The aspect ratio of the rectangles. Default is 4/3.
        
-	minHeight 	number
+	minHeight  number
 		Minimum height of the rectangle. Default is 1.
        
-	minWidth 	number
+	minWidth  number
 		Minimum width of the rectangle. Default is 1.
        
 	padding  number
 		Width of the right and the height of the bottom padding 
 		for the each rectangle. Default is 0.
        
+
 
 ## Methods
 
@@ -96,4 +97,5 @@ npm install rectjuster
 
 ## Example
 
-The rectjuster.htm contains an example which.
+The [*rectjuster.htm*](https://github.com/ollikekalainen/rectjuster/blob/master/rectjuster.htm) 
+contains an example of using the *rectjuster*
