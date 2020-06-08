@@ -1,7 +1,7 @@
 # Rectjuster
 	
 **Rectjuster** is a tool for scaling rectangles with a given aspect ratio, minimum width, 
-and / or height to fit a larger rectangle with a given width and height. It also takes
+and / or height to fit inside a larger rectangle with a given width and height. It also takes
 into account the width of the padding on the bottom and right sides of the rectangles.
 
 The result of the adjustment includes the width and height of the scaled rectangles
