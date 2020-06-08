@@ -10,6 +10,11 @@ inside a larger rectangle. The result of the calculation also includes the actua
 rectangles that fit inside the larger rectangle with the given minimum width and / or height.
 
 
+## Installaion
+
+npm install rectjuster
+
+
 ## Initialization
 
 ### node.js
@@ -23,65 +28,72 @@ rectangles that fit inside the larger rectangle with the given minimum width and
 ### Browser
 
          
-	const rectjuster = new new Rectjuster(options);
+	const rectjuster = new Rectjuster(options);
+         
 
 
+### Initialization options
 
-### Initalization options
-
-- aspectRatio  number
-The aspect ratio of the rectangles. Default is 4/3.
-
-- minHeight 	number
-	Minimum height of the rectangle.
-
-- minWidth 	number
-	Minimum width of the rectangle.
-
-- padding  number
-	Width of the right and the height of the bottom padding for the each rectangle.
-
+       
+	aspectRatio  number
+		The aspect ratio of the rectangles. Default is 4/3.
+       
+	minHeight 	number
+		Minimum height of the rectangle. Default is 1.
+       
+	minWidth 	number
+		Minimum width of the rectangle. Default is 1.
+       
+	padding  number
+		Width of the right and the height of the bottom padding 
+		for the each rectangle. Default is 0.
+       
 
 ## Methods
 
          
 	adjust( params ) -> result
          
-	params  object
+		params  object
          
-		height  number
-			The height of the area in witch rectangles are scaled
+			height  number
+				The height of the area in witch rectangles are scaled
          
-		rectangleCount  number
-			The number of rectangles to be fitted to the area.
+			rectangleCount  number
+				The number of rectangles to be fitted to the area.
          
-		width  number
-			The width of the area in witch rectangles are scaled
+			width  number
+				The width of the area in witch rectangles are scaled
          
-	Returns an object value.
-		{
-			width: number,
-			height: number,
-			columns: number,
-			rows: number,
-			rectangles: number
-		}
+		Return value
+			{
+				width: number,
+				height: number,
+				columns: number,
+				rows: number,
+				rectangles: number
+			}
          
-		columns
-			The number of columns in area.
-         
-		height
-			Height (without the padding) of the rectangles that fit the area.
-         
-		rectangles
-			The actual number of the rectangles that fit the area in their minimum size.
-         
-		rows
-			The number of row in area.
-         
-		width
-			Width (without the padding) of the rectangles that fit the area.
-         
+			columns
+				The number of columns according to which the rectangles 
+				are to be arranged inside the larger rectangle
+	         
+			height
+				Height (without the padding) of the rectangles that fit the area.
+	         
+			rectangles
+				The actual number of the rectangles that fit the area 
+				in their minimum size.
+	         
+			rows
+				The number of rows according to which the rectangles 
+				are to be arranged inside the larger rectangle
+	         
+			width
+				Width (without the padding) of the rectangles that fit the area.
+	         
 
 
+## Example
 
+The rectjuster.htm contains an example which.
