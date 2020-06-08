@@ -1,4 +1,4 @@
-#Rectjuster
+# Rectjuster
 	
 Rectjuster is a tool for scaling rectangles with a given aspect ratio, minimum width, 
 and / or height to fit a larger rectangle with a given width and height. It also takes
@@ -10,7 +10,7 @@ inside a larger rectangle. The result of the calculation also includes the actua
 rectangles that fit inside the larger rectangle with the given minimum width and / or height.
 
 
-##Initialization
+## Initialization
 
 ### node.js
 
@@ -24,7 +24,7 @@ rectangles that fit inside the larger rectangle with the given minimum width and
 
          
 	const rectjuster = new new Rectjuster(options);
-	     
+
 
 
 ### Initalization options
@@ -42,21 +42,22 @@ The aspect ratio of the rectangles. Default is 4/3.
 	Width of the right and the height of the bottom padding for the each rectangle.
 
 
-## adjust method
+## Methods
 
-adjust( params ) -> result
-
+         
+	adjust( params ) -> result
+         
 	params  object
-
+         
 		height  number
 			The height of the area in witch rectangles are scaled
-
+         
 		rectangleCount  number
 			The number of rectangles to be fitted to the area.
-
+         
 		width  number
 			The width of the area in witch rectangles are scaled
-
+         
 	Returns an object value.
 		{
 			width: number,
@@ -65,21 +66,22 @@ adjust( params ) -> result
 			rows: number,
 			rectangles: number
 		}
-
+         
 		columns
 			The number of columns in area.
-
+         
 		height
 			Height (without the padding) of the rectangles that fit the area.
-
+         
 		rectangles
 			The actual number of the rectangles that fit the area in their minimum size.
-
+         
 		rows
 			The number of row in area.
-
+         
 		width
 			Width (without the padding) of the rectangles that fit the area.
+         
 
 
 
