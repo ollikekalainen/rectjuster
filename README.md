@@ -97,5 +97,5 @@ npm install rectjuster
 
 ## Example
 
-The [*rectjuster.htm*](https://github.com/ollikekalainen/rectjuster/blob/master/rectjuster.htm) 
-contains an example of using the *rectjuster*
+The [rectjuster.htm](https://github.com/ollikekalainen/rectjuster/blob/master/rectjuster.htm) 
+contains an example of using the **rectjuster**
