@@ -15,24 +15,28 @@ rectangles that fit inside the larger rectangle with the given minimum width and
 npm install rectjuster
 
 
-## Initialization
+## Usage
 
-### node.js
+### Initialization
+
+#### node.js
 
           
 	const Rectjuster = require("rectjuster");
 	const rectjuster = new Rectjuster(options);
           
+	  
 
 
-### Browser
+#### Browser
 
          
 	const rectjuster = new Rectjuster(options);
          
+	  
 
 
-### Initialization options
+#### Initialization options
 
        
 	aspectRatio  number
@@ -48,9 +52,10 @@ npm install rectjuster
 		Width of the right and the height of the bottom padding 
 		for the each rectangle. Default is 0.
        
+	  
 
 
-## Methods
+### Methods
 
          
 	adjust( params ) -> result
@@ -93,9 +98,10 @@ npm install rectjuster
 			width
 				Width (without the padding) of the rectangles that fit the area.
 	         
+	  
 
 
 ## Example
 
 The [rectjuster.htm](https://github.com/ollikekalainen/rectjuster/blob/master/rectjuster.htm) 
-contains an example of using the **rectjuster**
+contains an example of using **rectjuster**.
